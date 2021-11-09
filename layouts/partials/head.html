@@ -1,0 +1,18 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{ if not .IsHome }}{{ with .Title }}{{ . }} | {{ end }}{{ end }}{{ .Site.Title }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }} ">
+
+  {{ partial "favicon.html" . }}
+
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="stylesheet" href="{{ absURL "css/bulma.min.css" }}">
+  <link rel="stylesheet" href="/css/fa-all.min.css">
+  <link rel="stylesheet" type="text/css" href="">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+  {{ if not (in (string .Site.BaseURL) "localhost") }}
+    {{ template "_internal/google_analytics_async.html" . }}
+  {{ end }}
+</head>
