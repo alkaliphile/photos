@@ -6,6 +6,9 @@
 
   {{ partial "favicon.html" . }}
 
+  {{ $style := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
+
   <link rel="canonical" href="{{ .Permalink }}">
   <link rel="stylesheet" href="{{ absURL "css/bulma.min.css" }}">
   <link rel="stylesheet" href="/css/fa-all.min.css">

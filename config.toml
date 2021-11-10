@@ -12,13 +12,17 @@ googleAnalytics = "UA-123-45"
     url = "/"
     weight = 1
   [[menu.main]]
-    name = "Posts"
-    url = "/posts/"
+    name = "Images"
+    url = "/images/"
     weight = 2
   [[menu.main]]
-    name = "Tags"
-    url = "/tags/"
+    name = "Blog"
+    url = "/posts/"
     weight = 3
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 4
 
 [[menu.social]]
   name = "GitHub"
