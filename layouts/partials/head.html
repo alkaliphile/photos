@@ -9,11 +9,11 @@
   {{ $style := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.Permalink }}">
 
+  {{ $bulma := resources.Get "bulma/bulma.sass" | toCSS (dict "outputStyle" "compressed") | fingerprint }}
+  <link rel="stylesheet" href="{{ $bulma.Permalink }}">
+
   <link rel="canonical" href="{{ .Permalink }}">
-  <link rel="stylesheet" href="{{ absURL "css/bulma.min.css" }}">
   <link rel="stylesheet" href="/css/fa-all.min.css">
-  <link rel="stylesheet" type="text/css" href="">
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
 
   {{ if not (in (string .Site.BaseURL) "localhost") }}
     {{ template "_internal/google_analytics_async.html" . }}

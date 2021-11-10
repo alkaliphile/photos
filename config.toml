@@ -2,6 +2,7 @@ baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'Chris Keele'
 googleAnalytics = "UA-123-45"
+enableRobotsTXT = true
 
 [params]
   description = "Chris Keele. Avian photographer. Baker of bread. Practitioner of bodyweight fitness."
