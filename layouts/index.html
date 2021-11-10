@@ -2,6 +2,7 @@
 <div class="container">
   <div class="section">
     <div class="content">
+      {{ with .Content }}{{ . | safeHTML }}{{ end }}
       {{ .Content }}
     </div>
   </div>

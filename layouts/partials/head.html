@@ -9,9 +9,6 @@
   {{ $style := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.Permalink }}">
 
-  {{ $bulma := resources.Get "bulma/bulma.sass" | toCSS (dict "outputStyle" "compressed") | fingerprint }}
-  <link rel="stylesheet" href="{{ $bulma.Permalink }}">
-
   <link rel="canonical" href="{{ .Permalink }}">
   <link rel="stylesheet" href="/css/fa-all.min.css">
 
