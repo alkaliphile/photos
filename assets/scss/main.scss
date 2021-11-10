@@ -1,14 +1,11 @@
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+{{ with .Site.Params.primaryColor }}
+$primary: {{ . }};
+{{ end }}
+{{ with .Site.Params.googleFont }}
+@import url('https://fonts.googleapis.com/css?family={{ . }}:400,700');
+$family-sans-serif: {{ . }}, sans-serif;
+{{ end }}
 
-main {
-  flex: 1;
-}
-
-$primary: #1a535c;
 // @import "../bulma/bulma.sass";
 
 @import "../bulma/sass/utilities/_all";
@@ -19,3 +16,28 @@ $primary: #1a535c;
 @import "../bulma/sass/grid/_all";
 @import "../bulma/sass/helpers/_all";
 @import "../bulma/sass/layout/_all";
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.max-800px {
+  max-width: 800px;
+}
+
+.author-image {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+}
+
+.title-image {
+  padding-bottom: 2em;
+}

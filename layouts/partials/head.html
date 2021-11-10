@@ -6,7 +6,7 @@
 
   {{ partial "favicon.html" . }}
 
-  {{ $style := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
+  {{ $style := resources.Get "scss/main.scss" | resources.ExecuteAsTemplate "style.scss" . | toCSS | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $style.Permalink }}">
 
   <link rel="canonical" href="{{ .Permalink }}">
