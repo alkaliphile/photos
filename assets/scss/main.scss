@@ -5,6 +5,9 @@ $primary: {{ . }};
 @import url('https://fonts.googleapis.com/css?family={{ . }}:400,700');
 $family-sans-serif: {{ . }}, sans-serif;
 {{ end }}
+{{ with .Site.Params.backgroundColor }}
+$bg-color: {{ . }};
+{{ end }}
 
 // @import "../bulma/bulma.sass";
 
@@ -18,9 +21,18 @@ $family-sans-serif: {{ . }}, sans-serif;
 @import "../bulma/sass/layout/_all";
 
 body {
+  background-color: $bg-color;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.navbar {
+  background-color: $bg-color;
+}
+
+a.navbar-item:hover {
+  background-color: #ebebeb;
 }
 
 main {

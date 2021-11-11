@@ -7,27 +7,24 @@ enableRobotsTXT = true
 [params]
   description = "Chris Keele. Avian photographer. Baker of bread. Practitioner of bodyweight fitness."
   primaryColor = "#1a535c"
+  backgroundColor = "#f7f7f7"
   googleFont = "Roboto"
   author = "Chris Keele"
   authorImage = "/images/birds/_M6A4570-750px.jpg"
 
 [menu]
   [[menu.main]]
-    name = "Home"
-    url = "/"
-    weight = 1
-  [[menu.main]]
     name = "Images"
     url = "/images/"
-    weight = 2
+    weight = 1
   [[menu.main]]
     name = "Blog"
     url = "/blog/"
-    weight = 3
+    weight = 2
   [[menu.main]]
     name = "About"
     url = "/about/"
-    weight = 4
+    weight = 3
 
 [[menu.social]]
   name = "GitHub"
