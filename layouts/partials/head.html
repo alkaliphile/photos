@@ -1,13 +1,25 @@
 <head>
-  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html"charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>{{ if not .IsHome }}{{ with .Title }}{{ . }} | {{ end }}{{ end }}{{ .Site.Title }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }} ">
 
   {{ partial "favicon.html" . }}
 
-  {{ $style := resources.Get "scss/main.scss" | resources.ExecuteAsTemplate "style.scss" . | toCSS | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $style.Permalink }}">
+  {{ $style := resources.Get "css/main.css" | postCSS }}
+
+  <!-- {{ if .Site.IsServer }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}"/>
+  {{ else }}
+    {{ $style := $style | minify | fingerprint | resources.PostProcess }}
+      <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}"/>
+  {{ end }} -->
+
+  {{ $style := $style | minify | fingerprint | resources.PostProcess }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}"/>
+
+  <!-- {{ $style := resources.Get "scss/main.scss" | resources.ExecuteAsTemplate "style.scss" . | toCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}"> -->
 
   <link rel="canonical" href="{{ .Permalink }}">
   <link rel="stylesheet" href="/css/fa-all.min.css">

@@ -1,0 +1,27 @@
+{
+  "name": "photos",
+  "version": "1.0.0",
+  "description": "Chris Keele photography website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alkaliphile/photos.git"
+  },
+  "author": "Chris Keele",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alkaliphile/photos/issues"
+  },
+  "homepage": "https://github.com/alkaliphile/photos#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.3.11",
+    "postcss-cli": "^9.0.2",
+    "postcss-import": "^14.0.2",
+    "tailwindcss": "^2.2.19"
+  },
+  "dependencies": {}
+}
