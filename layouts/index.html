@@ -1,23 +1,11 @@
 {{ define "main" }}
 <div>
   <div>
-    <div class="section">
-      <div class="content">
-      </div>
-    </div>
-  </div>
-  <div>
-    {{ with .Params.image }}
+    {{ with .Params.image1 }}
     <img src="{{ . }}">
     {{ end }}
   </div>
 </div>
-<!-- <div class="container">
-  <div class="section">
-    <div class="content">
-    </div>
-  </div>
-</div> -->
 
 <main class="container mx-auto px-4 py-24 bg-gray-100">
   <h1>Welcome to Hugo with Tailwind CSS</h1>

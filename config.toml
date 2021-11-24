@@ -6,9 +6,6 @@ enableRobotsTXT = true
 
 [params]
   description = "Chris Keele. Avian photographer. Baker of bread. Practitioner of bodyweight fitness."
-  primaryColor = "#1a535c"
-  backgroundColor = "#f7f7f7"
-  googleFont = "Roboto"
   author = "Chris Keele"
   authorImage = "/images/birds/_M6A4570-750px.jpg"
 
@@ -26,12 +23,12 @@ enableRobotsTXT = true
     url = "/contact/"
     weight = 3
 
-[[menu.social]]
-  name = "GitHub"
-  url = "https://github.com/alkaliphile"
-  pre = "<img src=\"svg/github-original.svg\" alt=\"View my GitHub profile.\" class=\"icon\">"
+  [[menu.social]]
+    name = "GitHub"
+    url = "https://github.com/alkaliphile"
+    pre = "/svg/github-original.svg"
 
-[[menu.social]]
-  name = "Instagram"
-  url = "https://www.instagram.com/chris_keele/"
-  pre = "<img src=\"svg/instagram-original.svg\" alt=\"Visit me on Instagram!\">"
+  [[menu.social]]
+    name = "Instagram"
+    url = "https://www.instagram.com/chris_keele/"
+    pre = "/svg/instagram-original.svg"

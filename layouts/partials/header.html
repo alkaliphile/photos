@@ -1,23 +1,18 @@
 <header>
   <nav>
     <div>
-      <div>
-        <a href="/" title="home">
-          <span class="logo"><h1>{{ .Site.Title }}</h1></span>
-        </a>
-        {{ range .Site.Menus.social }}
+      <a href="/" title="home">
+        <span class="logo"><h1>{{ .Site.Title }}</h1></span>
+      </a>
+      {{ range .Site.Menus.social }}
         <a href="{{ .URL }}" title="{{ .Name }}">
-          {{ .Pre }}
+          <img src="{{ .Pre | absURL }}" alt="{{ .Name }}" class="inline-block">
         </a>
-        {{ end }}
-      </div>
-      <div>
-        <div>
-          {{ range .Site.Menus.main }}
-          <a href="{{ .URL }}">{{ .Name }}</a>
-          {{ end }}
-        </div>
-      </div>
+      {{ end }}
+    <div>
+      {{ range .Site.Menus.main }}
+      <a href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
     </div>
   </nav>
 </header>

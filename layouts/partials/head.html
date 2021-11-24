@@ -8,8 +8,16 @@
   {{ partial "favicon.html" . }}
 
   {{ $style := resources.Get "css/main.css" | postCSS }}
-  {{ $style := $style | minify | fingerprint | resources.PostProcess }}
-  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}"/>
+  <!-- {{ $style := $style | minify | fingerprint | resources.PostProcess }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}"/> -->
+
+  {{ if .Site.IsServer }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}"/>
+  {{ else }}
+    {{ $style := $style | minify | fingerprint | resources.PostProcess }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}"/>
+  {{ end }}
+
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
 
