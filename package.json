@@ -4,7 +4,7 @@
   "description": "Chris Keele photography website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "tailwind": "npx tailwindcss -i ./assets/css/main.css "
   },
   "repository": {
     "type": "git",

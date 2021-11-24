@@ -22,16 +22,16 @@ enableRobotsTXT = true
     url = "/blog/"
     weight = 2
   [[menu.main]]
-    name = "About"
-    url = "/about/"
+    name = "Contact"
+    url = "/contact/"
     weight = 3
 
 [[menu.social]]
   name = "GitHub"
   url = "https://github.com/alkaliphile"
-  pre = "<i class='fab fa-github'></i>"
+  pre = "<img src=\"svg/github-original.svg\" alt=\"View my GitHub profile.\" class=\"icon\">"
 
 [[menu.social]]
   name = "Instagram"
   url = "https://www.instagram.com/chris_keele/"
-  pre = "<i class='fab fa-instagram'></i>"
+  pre = "<img src=\"svg/instagram-original.svg\" alt=\"Visit me on Instagram!\">"
