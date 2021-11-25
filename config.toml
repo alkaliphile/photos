@@ -14,22 +14,22 @@ enableRobotsTXT = true
     name = "Home"
     url = "/"
     weight = 1
-    pre = "/svg/home.svg"
+    pre = "/svg/home-light.svg"
   [[menu.main]]
     name = "Images"
     url = "/images/"
     weight = 2
-    pre = "/svg/image.svg"
+    pre = "/svg/image-light.svg"
   [[menu.main]]
     name = "Blog"
     url = "/blog/"
     weight = 3
-    pre = "/svg/signal.svg"
+    pre = "/svg/signal-light.svg"
   [[menu.main]]
     name = "About"
     url = "/about/"
     weight = 4
-    pre = "/svg/information.svg"
+    pre = "/svg/info-light.svg"
 
   [[menu.social]]
     name = "GitHub"

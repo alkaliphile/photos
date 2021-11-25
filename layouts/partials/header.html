@@ -1,7 +1,7 @@
 <header class="inset-x-0 fixed bg-blue bottom-0 sm:bg-light-body sm:static">
   <nav class="px-8 lg:px-16 xl:px-16 text-light-text sm:text-green">
-    <div class="container mx-auto flex justify-between items-center h-14 xl:max-w-screen-xl">
-      <a href="/" title="home" class="py-4 px-5 hidden sm:inline sm:hover:bg-green sm:hover:text-light-body">
+    <div class="container sm:mx-auto flex justify-between items-center xl:max-w-screen-xl">
+      <a href="/" title="home" class="py-4 px-5 hidden sm:inline sm:hover:bg-green sm:hover:text-light-body h-14">
         <span class="font-bold text-xl">{{ .Site.Title }}</span>
       </a>
         <!-- {{ range .Site.Menus.social }}
@@ -9,20 +9,17 @@
           <img src="{{ .Pre | absURL }}" alt="{{ .Name }}" class="inline-block">
         </a>
         {{ end }} -->
-      <div class="hidden h-full items-center sm:flex">
+      <div class="hidden h-14 items-center sm:flex">
         {{ range .Site.Menus.main }}
         <a href="{{ .URL }}" class="py-4 px-5 sm:hover:bg-light-hover">{{ .Name }}</a>
-        <a href="{{ .URL }}" title="{{ .Name }}" class="sm:hidden">
-          <img src="{{ .Pre | absURL }}" alt="{{ .Name }}" class="inline-block">
-        </a>
         {{ end }}
       </div>
 
-      <div class="flex h-full items-center sm:hidden">
+      <div class="flex h-16 w-full mx-auto justify-between items-center sm:hidden">
         {{ range .Site.Menus.main }}
-        <a href="{{ .URL }}" class="py-4 px-5 sm:hover:bg-light-hover">{{ .Name }}</a>
-        <a href="{{ .URL }}" title="{{ .Name }}" class="sm:hidden">
+        <a href="{{ .URL }}" title="{{ .Name }}" class="flex flex-col gap-1 items-center justify-center w-16 h-16">
           <img src="{{ .Pre | absURL }}" alt="{{ .Name }}" class="inline-block">
+          <span class="text-xs">{{ .Name }}</span>
         </a>
         {{ end }}
       </div>
