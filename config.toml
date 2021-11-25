@@ -5,23 +5,31 @@ googleAnalytics = "UA-123-45"
 enableRobotsTXT = true
 
 [params]
-  description = "Chris Keele. Avian photographer. Baker of bread. Practitioner of bodyweight fitness."
+  description = "Chris Keele. Avian photographer. Baker of bread. Bodyweight fitness enthusiast."
   author = "Chris Keele"
   authorImage = "/images/birds/_M6A4570-750px.jpg"
 
 [menu]
   [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+    pre = "/svg/home.svg"
+  [[menu.main]]
     name = "Images"
     url = "/images/"
-    weight = 1
+    weight = 2
+    pre = "/svg/image.svg"
   [[menu.main]]
     name = "Blog"
     url = "/blog/"
-    weight = 2
-  [[menu.main]]
-    name = "Contact"
-    url = "/contact/"
     weight = 3
+    pre = "/svg/signal.svg"
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 4
+    pre = "/svg/information.svg"
 
   [[menu.social]]
     name = "GitHub"
