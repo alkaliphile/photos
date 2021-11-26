@@ -17,7 +17,7 @@
 
       <div class="flex h-16 w-full mx-auto justify-between items-center sm:hidden">
         {{ range .Site.Menus.main }}
-        <a href="{{ .URL }}" title="{{ .Name }}" class="flex flex-col gap-1 items-center justify-center w-16 h-16">
+        <a href="{{ .URL }}" title="{{ .Name }}" class="flex flex-col gap-2 items-center justify-center w-16 h-16">
           <img src="{{ .Pre | absURL }}" alt="{{ .Name }}" class="inline-block">
           <span class="text-xs">{{ .Name }}</span>
         </a>

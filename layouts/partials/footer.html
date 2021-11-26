@@ -1,5 +1,5 @@
+{{ if not .IsHome }}
 <footer class="flex justify-center py-1">
-  {{ if not .IsHome }}
-    Copyright (c) {{ now.Format "2006"}} Chris Keele
-  {{ end }}
+  Copyright (c) {{ now.Format "2006"}} Chris Keele
 </footer>
+{{ end }}

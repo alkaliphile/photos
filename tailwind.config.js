@@ -18,7 +18,7 @@ module.exports = {
           lighter: '#7798AB'
         },
         green: {
-          DEFAULT: '#558273'
+          DEFAULT: '#4D7566'
         }
         // 'selected-text': '#A3A3FF',
         // 'theme': '#3F3FFF',
