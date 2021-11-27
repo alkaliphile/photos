@@ -1,13 +1,8 @@
 <header class="px-8 lg:px-16 xl:px-16 text-light-text sm:text-green inset-x-0 fixed bg-blue bottom-0 sm:bg-light-body sm:static h-16 sm:h-14 flex items-center">
-  <nav class="hidden sm:container sm:mx-auto sm:flex justify-between items-center xl_max-w-screen-xl">
+  <nav class="hidden sm:container sm:mx-auto sm:flex justify-between items-center">
     <a href="/" title="home" class="hidden sm:hover:underline sm:flex sm:items-center">
-      <span class="font-bold text-xl">{{ .Site.Title }}</span>
+      <span class="font-bold text-2xl">{{ .Site.Title }}</span>
     </a>
-      <!-- {{ range .Site.Menus.social }}
-      <a href="{{ .URL }}" title="{{ .Name }}">
-        <img src="{{ .Pre | absURL }}" alt="{{ .Name }}" class="inline-block">
-      </a>
-      {{ end }} -->
     <div class="hidden items-center sm:flex sm:gap-10">
       {{ range .Site.Menus.main }}
       <a href="{{ .URL }}" class="sm:hover:underline">{{ .Name }}</a>

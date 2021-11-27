@@ -2,15 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-.landing {
+.bg-image {
   min-height: calc(100vh - 4rem);
   background-position: 35%;
   background-image: url('../images/birds/015A2981-750px.jpg');
 }
 
-/* @media (min-width: 600px) {
-  .landing {
-    min-height: calc(100vh - 3.5rem);
-    background-image: none;
+@media (min-width: 640px) {
+  .bg-image {
+    min-height: 60vh;
+    background-position: center 75%;
+    background-image: url('../images/birds/015A2981-1500px.jpg');
   }
-} */
+}
+
+@media (min-width: 1024px) {
+  .bg-image {
+    min-height: calc(100vh - 3.5rem);
+    background-image: url('../images/birds/015A2981-1500px.jpg');
+  }
+}

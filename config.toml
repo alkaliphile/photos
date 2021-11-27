@@ -34,9 +34,15 @@ enableRobotsTXT = true
   [[menu.social]]
     name = "GitHub"
     url = "https://github.com/alkaliphile"
-    pre = "/svg/github-original.svg"
-
+    pre = "/svg/github-blue.svg"
+    weight = 1
+  [[menu.social]]
+    name = "Email"
+    url = "mailto:christopher.l.keele@gmail.com"
+    pre = "/svg/envelope-blue.svg"
+    weight = 2
   [[menu.social]]
     name = "Instagram"
     url = "https://www.instagram.com/chris_keele/"
-    pre = "/svg/instagram-original.svg"
+    pre = "/svg/instagram-blue.svg"
+    weight = 3
