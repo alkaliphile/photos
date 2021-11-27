@@ -28,7 +28,7 @@
               software developer.<br>
               bread baker.
             </div>
-            <div class="sm:text-base lg:text-2xl">
+            <div class="sm:text-base lg:text-xl">
               *mostly in that order.
             </div>
           </div>
@@ -39,11 +39,14 @@
         </div>
         <div class="sm:absolute sm:inset-x-0 sm:bottom-0 lg:static flex justify-between items-center mb-4 lg:mt-0 sm:mx-auto lg:mx-0  sm:max-w-screen-sm md:max-w-screen-md sm:px-8 md:px-8 lg:px-0">
           <div class="text-xs text-blue">
-            Made with Hugo, tailwindcss, and Lineicons.
+            Made with
+            <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" class="hover:underline">Hugo</a>,
+            <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer" class="hover:underline">tailwindcss</a>, and
+            <a href="https://lineicons.com/" target="_blank" rel="noopener noreferrer" class="hover:underline"> Lineicons</a>.
           </div>
           <div class="flex gap-2">
             {{ range .Site.Menus.social }}
-            <a href="{{ .URL }}" title="{{ .Name }}" class="p-2 hover:bg-light-hover">
+            <a href="{{ .URL }}" title="{{ .Name }}" class="p-2 hover:bg-light-hover transition duration-300 ease-in-out">
               <img src="{{ .Pre | absURL }}" alt="{{ .Name }}" class="inline-block">
             </a>
             {{ end }}
