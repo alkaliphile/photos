@@ -8,9 +8,9 @@
   background-image: url('../images/birds/015A2981-750px.jpg');
 }
 
-@media (min-width: 600px) {
+/* @media (min-width: 600px) {
   .landing {
     min-height: calc(100vh - 3.5rem);
     background-image: none;
   }
-}
+} */
