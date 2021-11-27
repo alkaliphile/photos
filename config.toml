@@ -8,33 +8,42 @@ enableRobotsTXT = true
   description = "Chris Keele. Avian photographer. Baker of bread. Bodyweight fitness enthusiast."
   author = "Chris Keele"
   authorImage = "/images/birds/_M6A4570-750px.jpg"
+  sectionPagesMenu = "main"
 
 [menu]
   [[menu.main]]
     name = "Home"
+    identifier = "home"
+    title = "Home section"
     url = "/"
     weight = 1
     pre = "/svg/home-light.svg"
   [[menu.main]]
     name = "Images"
+    identifier = "images"
+    title = "Images section"
     url = "/images/"
     weight = 2
     pre = "/svg/image-light.svg"
   [[menu.main]]
     name = "Blog"
+    identifier = "blog"
+    title = "Blog section"
     url = "/blog/"
     weight = 3
     pre = "/svg/signal-light.svg"
   [[menu.main]]
     name = "About"
+    identifier = "about"
+    title = "About section"
     url = "/about/"
     weight = 4
     pre = "/svg/info-light.svg"
 
   [[menu.social]]
-    name = "GitHub"
-    url = "https://github.com/alkaliphile"
-    pre = "/svg/github-blue.svg"
+    name = "Instagram"
+    url = "https://www.instagram.com/chris_keele/"
+    pre = "/svg/instagram-blue.svg"
     weight = 1
   [[menu.social]]
     name = "Email"
@@ -42,7 +51,7 @@ enableRobotsTXT = true
     pre = "/svg/envelope-blue.svg"
     weight = 2
   [[menu.social]]
-    name = "Instagram"
-    url = "https://www.instagram.com/chris_keele/"
-    pre = "/svg/instagram-blue.svg"
+    name = "GitHub"
+    url = "https://github.com/alkaliphile"
+    pre = "/svg/github-blue.svg"
     weight = 3
