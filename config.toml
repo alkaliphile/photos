@@ -5,7 +5,7 @@ googleAnalytics = "UA-123-45"
 enableRobotsTXT = true
 
 [params]
-  description = "Chris Keele. Avian photographer. Baker of bread. Bodyweight fitness enthusiast."
+  description = "Chris Keele. Bird photographer. Baker of bread. Bodyweight fitness enthusiast."
   author = "Chris Keele"
   authorImage = "/images/birds/_M6A4570-750px.jpg"
   sectionPagesMenu = "main"
