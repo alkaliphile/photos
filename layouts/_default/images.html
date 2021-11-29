@@ -5,42 +5,42 @@
   <div class="container mx-auto">
     {{ range .tiles }}
 
-    {{ $tlImageName := printf "images/birds/%s" .tl }}
-    {{ $tlImage := resources.Get $tlImageName }}
-
-    {{ $trImageName := printf "images/birds/%s" .tr }}
-    {{ $trImage := resources.Get $trImageName }}
-
-    {{ $blImageName := printf "images/birds/%s" .bl }}
-    {{ $blImage := resources.Get $blImageName }}
-
-    {{ $brImageName := printf "images/birds/%s" .br }}
-    {{ $brImage := resources.Get $brImageName }}
-
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pb-4">
       <div class="grid grid-cols-1 gap-4">
-        <img src="{{ $tlImage.RelPermalink }}" class="transition duration-300 ease-in-out hover:opacity-80 cursor-pointer">
-
-        <!-- <a href="" class="opacity-0 hover:opacity-100 duration-300">
-          Details
-        </a> -->
-        <a href="" class="sm:hidden text-light-text bg-green p-4 text-center max-w-1/2 text-lg mb-4">
-          Details
-        </a>
-        <img src="{{ $blImage.RelPermalink }}" class="transition duration-300 ease-in-out hover:opacity-80 cursor-pointer">
-        <a href="" class="sm:hidden text-light-text bg-green p-4 text-center max-w-1/2 text-lg mb-4">
-          Details
-        </a>
+        <div class="sm:relative group">
+          {{ $tlImageName := printf "images/birds/%s" .tl }}
+          {{ $tlImage := resources.Get $tlImageName }}
+          <img src="{{ $tlImage.RelPermalink }}" class="pb-4 sm:pb-0 transition duration-300 ease-in-out group-hover:opacity-40 cursor-pointer">
+          <a href="" class="block text-light-text bg-green p-4 text-center max-w-1/2 sm:max-w-full text-lg mb-4 sm:mb-0 sm:opacity-0 group-hover:opacity-100 sm:duration-300 sm:absolute sm:left-0 sm:bottom-0 sm:right-0 sm:z-10 sm:flex sm:justify-center sm:text-xl sm:bg-transparent sm:items-center sm:h-full sm:text-black">
+            Details
+          </a>
+        </div>
+        <div class="sm:relative group">
+          {{ $blImageName := printf "images/birds/%s" .bl }}
+          {{ $blImage := resources.Get $blImageName }}
+          <img src="{{ $blImage.RelPermalink }}" class="pb-4 sm:pb-0 transition duration-300 ease-in-out group-hover:opacity-40 cursor-pointer">
+          <a href="" class="block text-light-text bg-green p-4 text-center max-w-1/2 sm:max-w-full text-lg mb-4 sm:mb-0 sm:opacity-0 group-hover:opacity-100 sm:duration-300 sm:absolute sm:left-0 sm:bottom-0 sm:right-0 sm:z-10 sm:flex sm:justify-center sm:text-xl sm:bg-transparent sm:items-center sm:h-full sm:text-black">
+            Details
+          </a>
+        </div>
       </div>
       <div class="grid grid-cols-1 gap-4">
-        <img src="{{ $trImage.RelPermalink }}" class="transition duration-300 ease-in-out hover:opacity-80 cursor-pointer">
-        <a href="" class="sm:hidden text-light-text bg-green p-4 text-center max-w-1/2 text-lg mb-4">
-          Details
-        </a>
-        <img src="{{ $brImage.RelPermalink }}" class="transition duration-300 ease-in-out hover:opacity-80 cursor-pointer">
-        <a href="" class="sm:hidden text-light-text bg-green p-4 text-center max-w-1/2 text-lg mb-4">
-          Details
-        </a>
+        <div class="sm:relative group">
+          {{ $trImageName := printf "images/birds/%s" .tr }}
+          {{ $trImage := resources.Get $trImageName }}
+          <img src="{{ $trImage.RelPermalink }}" class="pb-4 sm:pb-0 transition duration-300 ease-in-out group-hover:opacity-40 cursor-pointer">
+          <a href="" class="block text-light-text bg-green p-4 text-center max-w-1/2 sm:max-w-full text-lg mb-4 sm:mb-0 sm:opacity-0 group-hover:opacity-100 sm:duration-300 sm:absolute sm:left-0 sm:bottom-0 sm:right-0 sm:z-10 sm:flex sm:justify-center sm:text-xl sm:bg-transparent sm:items-center sm:h-full sm:text-black">
+            Details
+          </a>
+        </div>
+        <div class="sm:relative group">
+          {{ $brImageName := printf "images/birds/%s" .br }}
+          {{ $brImage := resources.Get $brImageName }}
+          <img src="{{ $brImage.RelPermalink }}" class="pb-4 sm:pb-0 transition duration-300 ease-in-out group-hover:opacity-40 cursor-pointer">
+          <a href="" class="block text-light-text bg-green p-4 text-center max-w-1/2 sm:max-w-full text-lg mb-4 sm:mb-0 sm:opacity-0 group-hover:opacity-100 sm:duration-300 sm:absolute sm:left-0 sm:bottom-0 sm:right-0 sm:z-10 sm:flex sm:justify-center sm:text-xl sm:bg-transparent sm:items-center sm:h-full sm:text-black">
+            Details
+          </a>
+        </div>
       </div>
     </div>
     {{ end }}
