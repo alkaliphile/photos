@@ -1,5 +1,10 @@
 {{ define "main" }}
-<div class="container">
+<section class="p-4 sm:p-8 lg:px-16 lg:py-4">
+  <div class="container mx-auto">
+    {{ .Content }}
+  </div>
+</section>
+<!-- <div class="container">
   <div class="section">
     <div class="content">
       <h1>{{ .Title }}</h1>
@@ -9,5 +14,5 @@
       {{ end }}
     </div>
   </div>
-</div>
+</div> -->
 {{ end }}

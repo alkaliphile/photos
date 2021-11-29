@@ -1,0 +1,10 @@
+{{ define "main" }}
+
+{{ with .Params.about }}
+<section class="p-4 sm:p-8 lg:px-16 lg:py-4">
+  <div class="container mx-auto">
+    {{ with .title }}{{ . }}{{ end }}
+  </div>
+</section>
+{{ end }}
+{{ end }}

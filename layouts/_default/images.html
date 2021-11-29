@@ -1,8 +1,51 @@
 {{ define "main" }}
 
 {{ with .Params.images }}
-<section>
-  {{ with .title }}{{ . }}{{ end }}
+<section class="p-4 pb-12 sm:p-8 lg:px-16 lg:py-4">
+  <div class="container mx-auto">
+    {{ range .tiles }}
+
+    {{ $tlImageName := printf "images/birds/%s" .tl }}
+    {{ $tlImage := resources.Get $tlImageName }}
+
+    {{ $trImageName := printf "images/birds/%s" .tr }}
+    {{ $trImage := resources.Get $trImageName }}
+
+    {{ $blImageName := printf "images/birds/%s" .bl }}
+    {{ $blImage := resources.Get $blImageName }}
+
+    {{ $brImageName := printf "images/birds/%s" .br }}
+    {{ $brImage := resources.Get $brImageName }}
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pb-4">
+      <div class="grid grid-cols-1 gap-4">
+        <img src="{{ $tlImage.RelPermalink }}" class="transition duration-300 ease-in-out hover:opacity-80 cursor-pointer">
+
+        <!-- <a href="" class="opacity-0 hover:opacity-100 duration-300">
+          Details
+        </a> -->
+        <a href="" class="sm:hidden text-light-text bg-green p-4 text-center max-w-1/2 text-lg mb-4">
+          Details
+        </a>
+        <img src="{{ $blImage.RelPermalink }}" class="transition duration-300 ease-in-out hover:opacity-80 cursor-pointer">
+        <a href="" class="sm:hidden text-light-text bg-green p-4 text-center max-w-1/2 text-lg mb-4">
+          Details
+        </a>
+      </div>
+      <div class="grid grid-cols-1 gap-4">
+        <img src="{{ $trImage.RelPermalink }}" class="transition duration-300 ease-in-out hover:opacity-80 cursor-pointer">
+        <a href="" class="sm:hidden text-light-text bg-green p-4 text-center max-w-1/2 text-lg mb-4">
+          Details
+        </a>
+        <img src="{{ $brImage.RelPermalink }}" class="transition duration-300 ease-in-out hover:opacity-80 cursor-pointer">
+        <a href="" class="sm:hidden text-light-text bg-green p-4 text-center max-w-1/2 text-lg mb-4">
+          Details
+        </a>
+      </div>
+    </div>
+    {{ end }}
+  </div>
 </section>
 {{ end }}
+
 {{ end }}
