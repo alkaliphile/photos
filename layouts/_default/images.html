@@ -12,13 +12,19 @@
           {{ $tlImageSmall := resources.Get $tlImageNameSmall }}
           {{ $tlImageNameLarge := printf "images/birds/%s-lg.jpg" .tl }}
           {{ $tlImageLarge := resources.Get $tlImageNameLarge }}
-          <img
+
+          <picture>
+            <source media="(max-width: 640px)" srcset="{{ $tlImageSmall.RelPermalink }}">
+            <source media="(min-width: 641px)" srcset="{{ $tlImageLarge.RelPermalink }}">
+            <img src="{{ $tlImageLarge.RelPermalink }}" class="pb-4 sm:pb-0 transition duration-300 ease-in-out group-hover:opacity-40 cursor-pointer">
+          </picture>
+          <!-- <img
             class="pb-4 sm:pb-0 transition duration-300 ease-in-out group-hover:opacity-40 cursor-pointer"
             srcset="
             {{ $tlImageSmall.RelPermalink }} 400w,
             {{ $tlImageLarge.RelPermalink }} 760w"
             src="{{ $tlImageLarge.RelPermalink }}"
-            sizes="(max-width: 400px) 400px, 760px">
+            sizes="(max-width: 400px) 400px, 760px"> -->
           <a href="" class="block text-light-text bg-green p-4 text-center max-w-1/2 sm:max-w-full text-lg mb-4 sm:mb-0 sm:opacity-0 group-hover:opacity-100 sm:duration-300 sm:absolute sm:left-0 sm:bottom-0 sm:right-0 sm:z-10 sm:flex sm:justify-center sm:text-xl sm:bg-transparent sm:items-center sm:h-full sm:text-black">
             Details
           </a>
