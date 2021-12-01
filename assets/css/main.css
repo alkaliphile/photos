@@ -4,8 +4,8 @@
 
 .bg-image {
   min-height: calc(100vh - 4rem);
-  background-position: 35%;
-  background-image: url('../images/birds/015A2981-750px.jpg');
+  background-position: right bottom;
+  background-image: url('../images/birds/015A2981-sm-crop-2.jpg');
 }
 
 @media (min-width: 640px) {
