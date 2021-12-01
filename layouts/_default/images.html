@@ -8,39 +8,53 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pb-4">
       <div class="grid grid-cols-1 gap-4">
         <div class="sm:relative group">
-          {{ $tlImageName := printf "images/birds/%s" .tl }}
-          {{ $tlImage := resources.Get $tlImageName }}
-          <img src="{{ $tlImage.RelPermalink }}" class="pb-4 sm:pb-0 transition duration-300 ease-in-out group-hover:opacity-40 cursor-pointer">
+          {{ $tlImageNameSmall := printf "images/birds/%s-sm.jpg" .tl }}
+          {{ $tlImageSmall := resources.Get $tlImageNameSmall }}
+          {{ $tlImageNameLarge := printf "images/birds/%s-lg.jpg" .tl }}
+          {{ $tlImageLarge := resources.Get $tlImageNameLarge }}
+          <img
+            class="pb-4 sm:pb-0 transition duration-300 ease-in-out group-hover:opacity-40 cursor-pointer"
+            srcset="
+            {{ $tlImageSmall.RelPermalink }} 400w,
+            {{ $tlImageLarge.RelPermalink }} 760w"
+            src="{{ $tlImageLarge.RelPermalink }}"
+            sizes="(max-width: 400px) 400px, 760px">
           <a href="" class="block text-light-text bg-green p-4 text-center max-w-1/2 sm:max-w-full text-lg mb-4 sm:mb-0 sm:opacity-0 group-hover:opacity-100 sm:duration-300 sm:absolute sm:left-0 sm:bottom-0 sm:right-0 sm:z-10 sm:flex sm:justify-center sm:text-xl sm:bg-transparent sm:items-center sm:h-full sm:text-black">
             Details
           </a>
         </div>
-        <div class="sm:relative group">
-          {{ $blImageName := printf "images/birds/%s" .bl }}
-          {{ $blImage := resources.Get $blImageName }}
-          <img src="{{ $blImage.RelPermalink }}" class="pb-4 sm:pb-0 transition duration-300 ease-in-out group-hover:opacity-40 cursor-pointer">
+        <!-- <div class="sm:relative group">
+          {{ $blImageNameSmall := printf "images/birds/%s-750px.jpg" .bl }}
+          {{ $blImageSmall := resources.Get $blImageNameSmall }}
+          {{ $blImageNameLarge := printf "images/birds/%s-1500px.jpg" .bl }}
+          {{ $blImageLarge := resources.Get $blImageNameLarge }}
+          <img src="{{ $blImageLarge.RelPermalink }}" class="pb-4 sm:pb-0 transition duration-300 ease-in-out group-hover:opacity-40 cursor-pointer">
           <a href="" class="block text-light-text bg-green p-4 text-center max-w-1/2 sm:max-w-full text-lg mb-4 sm:mb-0 sm:opacity-0 group-hover:opacity-100 sm:duration-300 sm:absolute sm:left-0 sm:bottom-0 sm:right-0 sm:z-10 sm:flex sm:justify-center sm:text-xl sm:bg-transparent sm:items-center sm:h-full sm:text-black">
             Details
           </a>
-        </div>
+        </div> -->
       </div>
       <div class="grid grid-cols-1 gap-4">
-        <div class="sm:relative group">
-          {{ $trImageName := printf "images/birds/%s" .tr }}
-          {{ $trImage := resources.Get $trImageName }}
-          <img src="{{ $trImage.RelPermalink }}" class="pb-4 sm:pb-0 transition duration-300 ease-in-out group-hover:opacity-40 cursor-pointer">
+        <!-- <div class="sm:relative group">
+          {{ $trImageNameSmall := printf "images/birds/%s-750px.jpg" .tr }}
+          {{ $trImageSmall := resources.Get $trImageNameSmall }}
+          {{ $trImageNameLarge := printf "images/birds/%s-1500px.jpg" .tr }}
+          {{ $trImageLarge := resources.Get $trImageNameLarge }}
+          <img src="{{ $trImageLarge.RelPermalink }}" class="pb-4 sm:pb-0 transition duration-300 ease-in-out group-hover:opacity-40 cursor-pointer">
           <a href="" class="block text-light-text bg-green p-4 text-center max-w-1/2 sm:max-w-full text-lg mb-4 sm:mb-0 sm:opacity-0 group-hover:opacity-100 sm:duration-300 sm:absolute sm:left-0 sm:bottom-0 sm:right-0 sm:z-10 sm:flex sm:justify-center sm:text-xl sm:bg-transparent sm:items-center sm:h-full sm:text-black">
             Details
           </a>
         </div>
         <div class="sm:relative group">
-          {{ $brImageName := printf "images/birds/%s" .br }}
-          {{ $brImage := resources.Get $brImageName }}
-          <img src="{{ $brImage.RelPermalink }}" class="pb-4 sm:pb-0 transition duration-300 ease-in-out group-hover:opacity-40 cursor-pointer">
+          {{ $brImageNameSmall := printf "images/birds/%s-750px.jpg" .br }}
+          {{ $brImageSmall := resources.Get $brImageNameSmall }}
+          {{ $brImageNameLarge := printf "images/birds/%s-1500px.jpg" .br }}
+          {{ $brImageLarge := resources.Get $brImageNameLarge }}
+          <img src="{{ $brImageLarge.RelPermalink }}" class="pb-4 sm:pb-0 transition duration-300 ease-in-out group-hover:opacity-40 cursor-pointer">
           <a href="" class="block text-light-text bg-green p-4 text-center max-w-1/2 sm:max-w-full text-lg mb-4 sm:mb-0 sm:opacity-0 group-hover:opacity-100 sm:duration-300 sm:absolute sm:left-0 sm:bottom-0 sm:right-0 sm:z-10 sm:flex sm:justify-center sm:text-xl sm:bg-transparent sm:items-center sm:h-full sm:text-black">
             Details
           </a>
-        </div>
+        </div> -->
       </div>
     </div>
     {{ end }}
