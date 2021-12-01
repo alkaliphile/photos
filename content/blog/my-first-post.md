@@ -1,7 +1,7 @@
 ---
 title: "My First Post"
 date: 2021-11-08T14:31:41-05:00
-draft: true
+draft: false
 tags: ["foo", "bar"]
 images:
   - /images/birds/015A2959-1500px.jpg
