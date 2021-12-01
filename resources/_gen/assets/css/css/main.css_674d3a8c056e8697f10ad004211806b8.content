@@ -960,7 +960,7 @@ video {
 .bg-image {
   min-height: calc(100vh - 4rem);
   background-position: 35%;
-  background-image: url('../images/birds/015A2981-750px-2.jpg');
+  background-image: url('../images/birds/015A2981-750px.jpg');
 }
 
 @media (min-width: 640px) {
