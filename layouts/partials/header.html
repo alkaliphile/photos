@@ -17,7 +17,12 @@
   <nav class="flex h-16 w-full mx-auto justify-between items-center sm:hidden">
     {{ range .Site.Menus.main }}
     <a href="{{ .URL }}" title="{{ .Name }}" class="flex flex-col gap-2 items-center justify-center w-16 h-16">
-      <img src="{{ .Pre | absURL }}" alt="{{ .Name }}" class="inline-block" width="24px" height="24px">
+      <picture>
+        <source srcset="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" media="(min-width: 640px)">
+        <img src="{{ .Pre | absURL }}" alt="{{ .Name }}" class="inline-block" width="24px" height="24px">
+      </picture>
+
+      <!-- <img src="{{ .Pre | absURL }}" alt="{{ .Name }}" class="inline-block" width="24px" height="24px"> -->
       <span class="text-xs">{{ .Name }}</span>
     </a>
     {{ end }}
