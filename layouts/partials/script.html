@@ -1,9 +1,8 @@
-<!-- <script src="/js/jquery.min.js"></script>
 <script>
-  $(document).ready(function () {
-    $(".navbar-burger").click(function () {
-      $(".navbar-burger").toggleClass("is-active");
-      $(".navbar-menu").toggleClass("is-active");
-    })
-  })
-</script> -->
+  const loader = document.getElementById('loader');
+
+  window.addEventListener('load', function(e) {
+    loader.classList.replace('opacity-100', 'opacity-0');
+    setTimeout(() => { loader.remove(); }, 250);
+  });
+</script>
