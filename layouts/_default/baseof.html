@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
   {{- partial "head.html" . -}}
-  <body class="bg-light-body font-roboto">
+  <body class="bg-light-body font-roboto min-h-screen w-full justify-between flex flex-col">
     {{- partial "preloader.html" . -}}
-    {{- partial "header.html" . -}}
-    {{- partial "banner.html" . -}}
-    <main>
-      {{- block "main" . }}{{- end }}
-    </main>
-    {{- partial "footer.html" . -}}
+    <div class="">
+      {{- partial "header.html" . -}}
+      {{- partial "banner.html" . -}}
+      <main>
+        {{- block "main" . }}{{- end }}
+      </main>
+    </div>
+    <div class="flex">
+      {{- partial "footer.html" . -}}
+    </div>
     {{- partial "script.html" . -}}
   </body>
 </html>
