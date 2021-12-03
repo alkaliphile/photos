@@ -13,5 +13,3 @@ images:
       bl: "_M6A0405"
       br: "_M6A2070"
 ---
-
-list index content

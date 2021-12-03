@@ -1,4 +1,30 @@
 {{ define "main" }}
-single image!
-{{ .Title }}
+
+{{ with .Params.image }}
+
+<section class="p-4 pb-12 sm:p-8 lg:px-16 lg:py-4">
+  <div class="container mx-auto">
+    <div class="grid grid-cols-3 gap-4">
+      <div class="col-span-2">
+        {{ $imageNameSmall := printf "images/birds/%s-sm.jpg" .file }}
+        {{ $imageSmall := resources.Get $imageNameSmall }}
+        {{ $imageNameLarge := printf "images/birds/%s-1500px.jpg" .file }}
+        {{ $imageLarge := resources.Get $imageNameLarge }}
+
+        <picture>
+          <source media="(max-width: 640px)" srcset="{{ $imageSmall.RelPermalink }}">
+          <source media="(min-width: 641px)" srcset="{{ $imageLarge.RelPermalink }}">
+          <img src="{{ $imageLarge.RelPermalink }}" class="pb-4 sm:pb-0">
+        </picture>
+      </div>
+      <div>
+        text and stuff
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{{ end }}
+
 {{ end }}
