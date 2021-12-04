@@ -4,11 +4,17 @@
     <a href="/">Chris Keele</a>
   </div>
   <div class="text-lg">
-    {{ .Title }}
+    {{ if in . "/images/" }}
+      Images
+    {{ else if in . "/blog/" }}
+      Blog
+    {{ else }}
+      {{ .Title }}
+    {{ end }}
   </div>
 </div>
 <div class="hidden px-4 sm:px-8 lg:px-16 sm:flex">
-  <div class="container mx-auto bg-blue text-light-text text-xl p-2">
+  <div class="container mx-auto bg-blue text-light-text text-xl py-2 px-4">
     {{ if in . "/images/" }}
       Images
     {{ else if in . "/blog/" }}
