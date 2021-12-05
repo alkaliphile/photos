@@ -1,19 +1,38 @@
 {{ define "main" }}
-blog list!
-<section class="p-4 sm:p-8 lg:px-16 lg:py-4">
+<section class="py-4 pb-12 sm:p-8 lg:px-16 lg:py-4">
   <div class="container mx-auto">
-    {{ .Content }}
-  </div>
-</section>
-<div class="container">
-  <div class="section">
-    <div class="content">
-      <h1>{{ .Title }}</h1>
-      {{ .Content }}
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pb-4">
       {{ range .Pages }}
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <div class="bg-blue-lighter text-light-text">
+        <div>
+          {{ $imageName := printf "images/blog/%s" .Params.image }}
+          {{ $image := resources.Get $imageName }}
+          {{ $image := $image.Resize "x410 webp photo" }}
+          <a href="{{ .Permalink }}">
+            <figure>
+              <img src="{{ $image.RelPermalink }}" alt="{{ .Params.alt }}">
+            </figure>
+          </a>
+        </div>
+        <div class="ml-4 -mt-4 flex gap-2">
+          {{ range $idx, $tag := .Params.tags }}
+          <a class="bg-green py-1 px-2">{{ $tag }}</a>
+          {{ end }}
+        </div>
+        <div class="p-4">
+          <div class="text-3xl">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </div>
+          <div class="my-1 text-sm">
+            {{ .Site.Params.Author }} | {{ .PublishDate.Format "January 2, 2006" }}
+          </div>
+          <div>
+            {{ .Summary}}
+          </div>
+        </div>
+      </div>
       {{ end }}
     </div>
   </div>
-</div>
+</section>
 {{ end }}

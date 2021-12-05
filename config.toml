@@ -5,6 +5,11 @@ googleAnalytics = "UA-123-45"
 enableRobotsTXT = true
 disablePathToLower = true
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [params]
   description = "Chris Keele. Bird photographer. Baker of bread. Bodyweight fitness enthusiast."
   author = "Chris Keele"

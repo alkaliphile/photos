@@ -1,13 +1,13 @@
 ---
-title: "My First Post"
-date: 2021-11-08T14:31:41-05:00
+title: "Bread World"
+date: 2021-12-04T14:31:41-05:00
 draft: false
-tags: ["foo", "bar"]
-images:
-  - /images/birds/015A2959-1500px.jpg
+image: "best-loaf-5by4.jpg"
+cover:
+  name: "best-loaf-2by1.jpg"
+  alt:  "Best loaf I've ever made."
 tags:
-  - Birds
-  - Plovers
+  - Bread
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 incididunt ut labore et dolore magna aliqua. Pellentesque eu tincidunt tortor
@@ -18,7 +18,7 @@ velit aliquet sagittis id consectetur. Vulputate dignissim suspendisse in est
 ante in nibh mauris cursus. Morbi quis commodo odio aenean. Mollis nunc sed id
 semper risus in hendrerit gravida rutrum.
 
-<!--more-->
+<br>
 
 Ac ut consequat semper viverra nam. Hac habitasse platea dictumst vestibulum
 rhoncus. Amet porttitor eget dolor morbi non. Justo eget magna fermentum
