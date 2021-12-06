@@ -3,7 +3,7 @@
   <div class="container mx-auto">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pb-4">
       {{ range .Pages }}
-      <div class="bg-blue-lighter text-light-text">
+      <div class="bg-blue-light text-light-text">
         <div>
           {{ $imageName := printf "images/blog/%s" .Params.image }}
           {{ $image := resources.Get $imageName }}

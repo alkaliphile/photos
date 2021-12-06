@@ -13,7 +13,11 @@ Hello bread. Hello birds. I'm Chris - a software developer currently living in D
 
 <br>
 
-I've been needing to claim a home for myself here on the internet for a while, so after much work, tinkering with colors and code, and binging TV in the background (countless, countless hours of TV), here it is! I'll be posting more bird pictures of mine that I think are decent, rambling about random aspects of photography, and eventually adding a section dedicated to my conservation goals Plus there'll be talk about bread and maybe bodyweight fitness, too! We'll see.
+I've been needing to claim a home for myself here on the internet for a while, so after much work, tinkering with colors and code, and binging TV in the background (countless, countless hours of TV), here it is!
+
+<br>
+
+I'll be posting more bird pictures of mine that I think are decent, rambling about random aspects of photography, and eventually adding a section dedicated to my conservation goals. Plus there'll be talk about bread and maybe bodyweight fitness, too! We'll see.
 
 <br>
 

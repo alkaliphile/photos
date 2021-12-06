@@ -3,7 +3,7 @@
 <section class="py-4 pb-12 sm:p-8 lg:px-16 lg:py-4">
   <div class="container mx-auto">
     <div class="row justify-between">
-      <div class="flex flex-col-reverse sm:flex-row gap-4 bg-blue text-light-text">
+      <div class="flex flex-col-reverse sm:flex-row gap-4 bg-blue-lighter text-light-text">
         <div class="p-4 sm:w-1/2 flex items-center">
           <div>
             {{ .Content | markdownify }}
@@ -18,11 +18,36 @@
           </figure>
         </div>
       </div>
-      <div class="flex flex-col sm:flex-row gap-4 bg-blue-lighter text-light-text min-h-50vh">
-        <div class="p-4 sm:w-1/2 text-2xl">
-          Contact Me
+      <div class="flex flex-col sm:flex-row gap-4 bg-blue-light text-light-text min-h-50vh">
+        <div class="p-4 sm:w-1/2">
+          <div class="text-2xl">
+            Contact Me
+          </div>
+          <form name="contact" method="POST" data-netlify="true" class="flex flex-col gap-4 mt-8">
+            <label class="flex flex-col">
+              <span class="text-xs mb-1">
+                Name
+              </span>
+              <input class="bg-blue-lighter p-2 focus:outline-green" type="text" name="name" />
+            </label>
+            <label class="flex flex-col">
+              <span class="text-xs mb-1">
+                Email
+              </span>
+              <input class="bg-blue-lighter p-2 focus:outline-green" type="email" name="email" />
+            </label>
+            <label class="flex flex-col">
+              <span class="text-xs mb-1">
+                Message
+              </span>
+              <textarea class="bg-blue-lighter p-2 focus:outline-green" name="message" rows="8"></textarea>
+            </label>
+            <div>
+              <button type="submit" class="sm:mt-2 transition duration-300 ease-in-out text-light-text bg-green hover:text-green hover:border-green hover:border-opacity-80 border-2 border-green hover:bg-light-body p-4 sm:max-h-16 lg:max-h-full inline-block">Submit</button>
+            </div>
+          </form>
         </div>
-        <div class="sm:w-1/2 flex justify-center items-center gap-4">
+        <div class="sm:w-1/2 flex justify-center items-center gap-4 py-16 sm:p-0">
           <div class="flex justify-center flex-col gap-4">
             <div class="text-center">
               Or:
@@ -30,7 +55,7 @@
             <div class="text-center">
               <a href="mailto:christopher.l.keele@gmail.com">christopher.l.keele@gmail.com</a>
             </div>
-            <div class="text-center">
+            <div class="flex gap-2 justify-center">
               {{ range .Site.Menus.social }}
               <a href="{{ .URL }}" title="{{ .Name }}" class="p-2 hover:bg-light-hover transition duration-300 ease-in-out">
                 <picture>

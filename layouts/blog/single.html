@@ -1,6 +1,6 @@
 {{ define "main" }}
 <section class="py-4 mb-12 sm:p-8 lg:px-16 lg:py-4">
-  <article class="container mx-auto bg-blue-lighter">
+  <article class="container mx-auto bg-blue-light">
     {{ with .Params.cover }}
     {{ $imageName := printf "images/blog/%s" .name }}
     {{ $image := resources.Get $imageName }}
@@ -10,7 +10,7 @@
     </figure>
     {{ end }}
 
-    <div class="p-4 bg-blue-lighter text-light-text lg:w-1/2">
+    <div class="p-4 bg-blue-light text-light-text lg:w-1/2">
       <div class="-mt-10 pb-4 pt-2 gap-2 flex">
         {{ range $idx, $tag := .Params.tags }}
           <a class="bg-light-body text-green py-1 px-2 text-sm">{{ $tag }}</a>
