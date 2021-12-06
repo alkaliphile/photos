@@ -11,9 +11,9 @@
     {{ end }}
 
     <div class="p-4 bg-blue-lighter text-light-text lg:w-1/2">
-      <div class="-mt-10 pb-4 pt-2 gap-2 flex text-sm">
+      <div class="-mt-10 pb-4 pt-2 gap-2 flex">
         {{ range $idx, $tag := .Params.tags }}
-          <a class="bg-green py-1 px-2">{{ $tag }}</a>
+          <a class="bg-light-body text-green py-1 px-2 text-sm">{{ $tag }}</a>
         {{ end }}
       </div>
       <div class="text-3xl">
