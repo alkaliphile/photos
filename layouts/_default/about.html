@@ -57,7 +57,7 @@
             </div>
             <div class="flex gap-2 justify-center">
               {{ range .Site.Menus.social }}
-              <a href="{{ .URL }}" title="{{ .Name }}" class="p-2 hover:bg-light-hover transition duration-300 ease-in-out">
+              <a href="{{ .URL }}" title="{{ .Name }}" target="_blank" class="p-2 hover:bg-light-hover transition duration-300 ease-in-out">
                 <picture>
                   {{ $svg := printf "svg/%s-light.svg" .Pre }}
                   <img src="{{ $svg | absURL }}" alt="{{ .Name }}" class="inline-block" width="24px" height="24px">

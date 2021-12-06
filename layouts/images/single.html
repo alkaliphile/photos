@@ -13,7 +13,7 @@
         <picture>
           <source media="(max-width: 640px)" srcset="{{ $imageSmall.RelPermalink }}">
           <source media="(min-width: 641px)" srcset="{{ $imageLarge.RelPermalink }}">
-          <img src="{{ $imageLarge.RelPermalink }}">
+          <img src="{{ $imageLarge.RelPermalink }}" class="w-full">
         </picture>
         {{ end }}
       </div>

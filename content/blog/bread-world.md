@@ -13,7 +13,7 @@ Hello bread. Hello birds. I'm Chris - a software developer currently living in D
 
 <br>
 
-I've been needing to claim a home for myself here on the internet for a while, so after much work, tinkering with colors and code, and binging TV in the background (countless, countless hours of TV), here it is!
+I've been needing to claim a home for myself here on the internet for a while, so after much work, tinkering with colors and code, and binging TV in the background (countless, countless hours of TV*), here it is!
 
 <br>
 
@@ -26,3 +26,20 @@ Usually printing hello world doesn't take so many characters, but that's just ho
 <br>
 
 Enjoy!
+
+<br>
+<br>
+
+<div class="text-sm mb-4">*TV consumed making this site:</div>
+
+
+Yellowstone
+Seasons 1-4
+
+The Orville
+Season 1-2
+
+Star Trek: The Next Generation
+Season 1
+
+Field of Dreams
