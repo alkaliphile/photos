@@ -1,7 +1,7 @@
 ---
 title: "Bird World"
 date: 2021-12-03T14:31:41-05:00
-draft: false
+draft: true
 image: "plover-brush-5by4.jpg"
 cover:
   name: "plover-brush-2by1.jpg"

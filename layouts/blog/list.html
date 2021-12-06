@@ -26,9 +26,10 @@
           <div class="my-1 text-sm">
             {{ .Site.Params.Author }} | {{ .PublishDate.Format "January 2, 2006" }}
           </div>
-          <div>
-            {{ .Summary}}
+          <div class="my-4">
+            {{ .Summary }}
           </div>
+          <a href="{{ .Permalink }}" class="transition duration-300 ease-in-out text-light-text bg-green hover:text-green hover:border-green hover:border-opacity-80 border-2 border-green hover:bg-light-body p-4 sm:max-h-16 lg:max-h-full inline-block">Read More</a>
         </div>
       </div>
       {{ end }}

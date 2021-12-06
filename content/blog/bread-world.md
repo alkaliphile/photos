@@ -9,24 +9,16 @@ cover:
 tags:
   - Bread
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Pellentesque eu tincidunt tortor
-aliquam nulla facilisi cras fermentum odio. A erat nam at lectus urna duis.
-Sed velit dignissim sodales ut eu sem. Lectus urna duis convallis convallis
-tellus. Diam sit amet nisl suscipit adipiscing bibendum est. Sed felis eget
-velit aliquet sagittis id consectetur. Vulputate dignissim suspendisse in est
-ante in nibh mauris cursus. Morbi quis commodo odio aenean. Mollis nunc sed id
-semper risus in hendrerit gravida rutrum.
+Hello bread. Hello birds. I'm Chris - a software developer currently living in Delaware, and those two things practically consitute my world these days. There at the top is a picture of the best looking loaf of sourdough I've ever baked. There's an images section, too, with the best bird photographs I've ever taken (if you ask me, anyway).
 
 <br>
 
-Ac ut consequat semper viverra nam. Hac habitasse platea dictumst vestibulum
-rhoncus. Amet porttitor eget dolor morbi non. Justo eget magna fermentum
-iaculis eu non. Id eu nisl nunc mi ipsum faucibus vitae aliquet nec. Aliquam
-id diam maecenas ultricies. Non sodales neque sodales ut etiam. Amet massa
-vitae tortor condimentum lacinia quis. Erat imperdiet sed euismod nisi porta.
-Nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Viverra
-suspendisse potenti nullam ac. Tincidunt id aliquet risus feugiat in. Varius
-quam quisque id diam vel. Egestas erat imperdiet sed euismod nisi. Scelerisque
-felis imperdiet proin fermentum leo vel orci porta non. Ut faucibus pulvinar
-elementum integer. Fermentum odio eu feugiat pretium nibh ipsum consequat nisl.
+I've been needing to claim a home for myself here on the internet for a while, so after much work, tinkering with colors and code, and binging TV in the background (countless, countless hours of TV), here it is! I'll be posting more bird pictures of mine that I think are decent, rambling about random aspects of photography, and eventually adding a section dedicated to my conservation goals Plus there'll be talk about bread and maybe bodyweight fitness, too! We'll see.
+
+<br>
+
+Usually printing hello world doesn't take so many characters, but that's just how things are going to be around here.
+
+<br>
+
+Enjoy!
