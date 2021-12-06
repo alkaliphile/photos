@@ -1,10 +1,50 @@
 {{ define "main" }}
 
-{{ with .Params.about }}
-<section class="p-4 sm:p-8 lg:px-16 lg:py-4">
+<section class="py-4 pb-12 sm:p-8 lg:px-16 lg:py-4">
   <div class="container mx-auto">
-    {{ with .title }}{{ . }}{{ end }}
+    <div class="row justify-between">
+      <div class="flex flex-col-reverse sm:flex-row gap-4 bg-blue text-light-text">
+        <div class="p-4 sm:w-1/2 flex items-center">
+          <div>
+            {{ .Content | markdownify }}
+          </div>
+        </div>
+        <div class="sm:w-1/2">
+          <figure>
+            {{ $imageName := printf "images/%s" .Params.image }}
+            {{ $image := resources.Get $imageName }}
+            {{ $image := $image.Resize "x700 webp photo" }}
+            <img src="{{ $image.Permalink }}" alt="{{ .Params.alt }}" class="w-full">
+          </figure>
+        </div>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-4 bg-blue-lighter text-light-text min-h-50vh">
+        <div class="p-4 sm:w-1/2 text-2xl">
+          Contact Me
+        </div>
+        <div class="sm:w-1/2 flex justify-center items-center gap-4">
+          <div class="flex justify-center flex-col gap-4">
+            <div class="text-center">
+              Or:
+            </div>
+            <div class="text-center">
+              <a href="mailto:christopher.l.keele@gmail.com">christopher.l.keele@gmail.com</a>
+            </div>
+            <div class="text-center">
+              {{ range .Site.Menus.social }}
+              <a href="{{ .URL }}" title="{{ .Name }}" class="p-2 hover:bg-light-hover transition duration-300 ease-in-out">
+                <picture>
+                  {{ $svg := printf "svg/%s-light.svg" .Pre }}
+                  <img src="{{ $svg | absURL }}" alt="{{ .Name }}" class="inline-block" width="24px" height="24px">
+                </picture>
+              </a>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
-{{ end }}
 {{ end }}

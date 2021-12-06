@@ -48,8 +48,9 @@
             {{ range .Site.Menus.social }}
             <a href="{{ .URL }}" title="{{ .Name }}" class="p-2 hover:bg-light-hover transition duration-300 ease-in-out">
               <picture>
+                {{ $svg := printf "svg/%s-blue.svg" .Pre }}
                 <source srcset="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" media="(max-width: 640px)">
-                <img src="{{ .Pre | absURL }}" alt="{{ .Name }}" class="inline-block" width="24px" height="24px">
+                <img src="{{ $svg | absURL }}" alt="{{ .Name }}" class="inline-block" width="24px" height="24px">
               </picture>
             </a>
             {{ end }}

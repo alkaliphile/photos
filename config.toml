@@ -4,6 +4,7 @@ title = 'Chris Keele'
 googleAnalytics = "UA-123-45"
 enableRobotsTXT = true
 disablePathToLower = true
+summaryLength = 40
 
 [markup]
   [markup.goldmark]
@@ -49,15 +50,15 @@ disablePathToLower = true
   [[menu.social]]
     name = "Instagram"
     url = "https://www.instagram.com/chris_keele/"
-    pre = "/svg/instagram-blue.svg"
+    pre = "instagram"
     weight = 1
   [[menu.social]]
     name = "Email"
     url = "mailto:christopher.l.keele@gmail.com"
-    pre = "/svg/envelope-blue.svg"
+    pre = "envelope"
     weight = 2
   [[menu.social]]
     name = "GitHub"
     url = "https://github.com/alkaliphile"
-    pre = "/svg/github-blue.svg"
+    pre = "github"
     weight = 3
