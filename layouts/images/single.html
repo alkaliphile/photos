@@ -5,7 +5,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
       <div>
         {{ with .Params.image }}
-        {{ $imageNameSmall := printf "images/birds/%s-sm.jpg" .file }}
+        {{ $imageNameSmall := printf "images/birds/%s-lg.jpg" .file }}
         {{ $imageSmall := resources.Get $imageNameSmall }}
         {{ $imageNameLarge := printf "images/birds/%s-lg.jpg" .file }}
         {{ $imageLarge := resources.Get $imageNameLarge }}
