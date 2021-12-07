@@ -1,9 +1,12 @@
-<!-- <script src="/js/lazysizes.min.js" async=""></script> -->
 <script>
   const loader = document.getElementById('loader');
 
   window.addEventListener('load', function(e) {
     loader.classList.replace('opacity-100', 'opacity-0');
-    setTimeout(() => { loader.remove(); }, 250);
+    setTimeout(() => {
+      document.body.classList.remove('fixed');
+      document.body.classList.add('sm:overflow-y-auto');
+      loader.remove();
+    }, 250);
   });
 </script>
