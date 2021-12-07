@@ -8,13 +8,13 @@ images:
       bottom: "_M6A0140"
     - top: "_M6A2043"
       bottom: "_M6A0701"
-    - top: "015A6349"
+    - top: "_M6A1487"
       bottom: "_M6A9074"
     - top: "_M6A3189"
       bottom: "_M6A2070"
     - top: "_M6A7504"
       bottom: "015A7970"
-    - top: "015A2959"
+    - top: "_M6A4318"
       bottom: "_M6A4577"
     - top: "015A3678"
       bottom: "_M6A9588"
@@ -36,12 +36,10 @@ images:
       bottom: "_M6A0268"
     - top: "_M6A2247"
       bottom: "_M6A0638"
+    - top: "_M6A6486"
+      bottom: "015A2959"
+    - top: "015A6349"
+      bottom: "_M6A2434"
+    - top: "_M6A6397"
+      bottom: "_M6A5646"
 ---
-
-<!-- verticals -->
-<!-- _M6A6486 -->
-<!-- _M6A5646 -->
-<!-- _M6A5469 -->
-<!-- _M6A2434 -->
-
-<!-- horizontal -->
