@@ -56,13 +56,14 @@
           {{ end }}
         </div>
         <div class="mt-4 sm:mt-0 mb-8">
-          {{ with .NextInSection }}
-          <a href="{{ .Permalink }}" class="transition duration-300 ease-in-out text-light-text bg-green hover:text-green hover:border-green hover:border-opacity-80 border-2 border-green hover:bg-light-body p-4 sm:max-h-16 lg:max-h-full mr-2">Next</a>
+          {{ with .PrevInSection }}
+          <a href="{{ .Permalink }}" class="transition duration-300 ease-in-out text-light-text bg-green hover:text-green hover:border-green hover:border-opacity-80 border-2 border-green hover:bg-light-body p-4 sm:max-h-16 lg:max-h-full mr-4">Previous</a>
           {{ end }}
 
-          {{ with .PrevInSection }}
-          <a href="{{ .Permalink }}" class="transition duration-300 ease-in-out text-light-text bg-green hover:text-green hover:border-green hover:border-opacity-80 border-2 border-green hover:bg-light-body p-4 sm:max-h-16 lg:max-h-full">Previous</a>
+          {{ with .NextInSection }}
+          <a href="{{ .Permalink }}" class="transition duration-300 ease-in-out text-light-text bg-green hover:text-green hover:border-green hover:border-opacity-80 border-2 border-green hover:bg-light-body p-4 sm:max-h-16 lg:max-h-full">Next</a>
           {{ end }}
+
         </div>
       </div>
     </div>
