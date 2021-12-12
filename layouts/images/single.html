@@ -17,53 +17,54 @@
         </picture>
         {{ end }}
       </div>
-      <div class="flex flex-col justify-between px-4 sm:px-2">
-        <div class="py-2 mb-4 sm:py-6 flex flex-col gap-4">
-          <div class="text-2xl">
-            {{ .Title }}
+      <div class="sm:grid sm:grid-cols-3 px-4 sm:px-2 sm:gap-4">
+        <div class="flex flex-col justify-between sm:col-span-2">
+          <div class="py-2 mb-4 sm:py-6 flex flex-col gap-4">
+            <div class="text-2xl">
+              {{ .Title }}
+            </div>
+            <div>
+              {{ .Content }}
+            </div>
+            {{ with .Params.image }}
+            <div class="flex items-center gap-4 mt-8">
+              <div>
+                <img src="/svg/chevron-right-light.svg" height="16px" width="16px">
+              </div>
+              <div>
+                {{ .species }}
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div>
+                <img src="/svg/camera-light.svg" height="16px" width="16px">
+              </div>
+              <div>
+                {{ .camera }}<br>
+                {{ .lens }}
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div>
+                <img src="/svg/cog-light.svg" height="16px" width="16px">
+              </div>
+              <div>
+                {{ .aperture }}<br>
+                {{ .shutter }}<br>
+                {{ .iso }}
+              </div>
+            </div>
+            {{ end }}
           </div>
-          <div>
-            {{ .Content }}
-          </div>
-          {{ with .Params.image }}
-          <div class="flex items-center gap-4 mt-8">
-            <div>
-              <img src="/svg/chevron-right-light.svg" height="16px" width="16px">
-            </div>
-            <div>
-              {{ .species }}
-            </div>
-          </div>
-          <div class="flex items-center gap-4">
-            <div>
-              <img src="/svg/camera-light.svg" height="16px" width="16px">
-            </div>
-            <div>
-              {{ .camera }}<br>
-              {{ .lens }}
-            </div>
-          </div>
-          <div class="flex items-center gap-4">
-            <div>
-              <img src="/svg/cog-light.svg" height="16px" width="16px">
-            </div>
-            <div>
-              {{ .aperture }}<br>
-              {{ .shutter }}<br>
-              {{ .iso }}
-            </div>
-          </div>
-          {{ end }}
         </div>
-        <div class="mt-4 sm:mt-0 mb-8">
+        <div class="pt-8 sm:mb-0 mb-8 sm:flex sm:flex-wrap gap-4 sm:place-content-start md:justify-end sm:mr-6">
           {{ with .PrevInSection }}
-          <a href="{{ .Permalink }}" class="transition duration-300 ease-in-out text-light-text bg-green hover:text-green hover:border-green hover:border-opacity-80 border-2 border-green hover:bg-light-body p-4 sm:max-h-16 lg:max-h-full mr-4">Previous</a>
+          <a href="{{ .Permalink }}" class="transition duration-300 ease-in-out text-light-text bg-green hover:text-green hover:border-green hover:border-opacity-80 border-2 border-green hover:bg-light-body p-4 sm:max-h-16 lg:max-h-full mr-4 md:mr-0 xl:mr-2">Previous</a>
           {{ end }}
 
           {{ with .NextInSection }}
           <a href="{{ .Permalink }}" class="transition duration-300 ease-in-out text-light-text bg-green hover:text-green hover:border-green hover:border-opacity-80 border-2 border-green hover:bg-light-body p-4 sm:max-h-16 lg:max-h-full">Next</a>
           {{ end }}
-
         </div>
       </div>
     </div>
