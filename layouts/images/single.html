@@ -55,11 +55,12 @@
               </div>
             </div>
             {{ end }}
-            <!-- {{ with .Params.image }}
-            {{ $imageName := printf "images/birds/%s.jpg" .file }}
-            {{ $image := resources.Get $imageName }}
+
             <div>
-              <a class="inline-flex gap-4 items-center cursor-pointer bg-blue-lighter hover:bg-blue transition duration-300 ease-in-out p-2 -ml-2" href="{{ $image.RelPermalink }}" data-lightbox="{{ $image.RelPermalink }}" data-title="{{ .Title }}">
+              {{ with .Params.image }}
+              {{ $imageName := printf "images/birds/%s.jpg" .file }}
+              {{ $image := resources.Get $imageName }}
+              <a class="inline-flex gap-4 items-center cursor-pointer bg-blue hover:bg-blue-lighter transition duration-300 ease-in-out p-2 -ml-2 maximize" onclick=maximize({{ $image.RelPermalink }})>
                 <div>
                   <img src="/svg/frame-expand-light.svg" height="16px" width="16px">
                 </div>
@@ -67,22 +68,26 @@
                   Maximize
                 </span>
               </a>
+              {{ end }}
             </div>
-            {{ end }} -->
           </div>
         </div>
         <div class="pt-8 sm:mb-0 mb-8 sm:flex sm:flex-wrap gap-4 sm:place-content-start md:justify-end sm:mr-2 xl:mr-6">
           {{ with .PrevInSection }}
-          <a href="{{ .Permalink }}" class="transition duration-300 ease-in-out text-light-text bg-green hover:text-green hover:border-green hover:border-opacity-80 border-2 border-green hover:bg-light-body p-4 sm:max-h-16 lg:max-h-full mr-4 md:mr-0 2xl:mr-2">Previous</a>
+          <a href="{{ .Permalink }}" class="tab-able transition duration-300 ease-in-out text-light-text bg-green hover:text-green hover:border-green hover:border-opacity-80 border-2 border-green hover:bg-light-body p-4 sm:max-h-16 lg:max-h-full mr-4 md:mr-0 2xl:mr-2">Previous</a>
           {{ end }}
 
           {{ with .NextInSection }}
-          <a href="{{ .Permalink }}" class="transition duration-300 ease-in-out text-light-text bg-green hover:text-green hover:border-green hover:border-opacity-80 border-2 border-green hover:bg-light-body p-4 sm:max-h-16 lg:max-h-full">Next</a>
+          <a href="{{ .Permalink }}" class="tab-able transition duration-300 ease-in-out text-light-text bg-green hover:text-green hover:border-green hover:border-opacity-80 border-2 border-green hover:bg-light-body p-4 sm:max-h-16 lg:max-h-full">Next</a>
           {{ end }}
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<div id="modal" class="hidden transition-all opacity-0 ease-in-out duration-500">
+  <div id="close" class="hidden text-light-text">X</div>
+</div>
 
 {{ end }}

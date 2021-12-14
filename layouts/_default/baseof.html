@@ -14,12 +14,9 @@
       {{- partial "footer.html" . -}}
     </div>
     {{- partial "script.html" . -}}
-    <!-- {{ if isset .Params "photo" }}
-    <script src="/js/lightbox-plus-jquery.min.js">
-      lightbox.option({
-        '':
-      })
-    </script>
-    {{ end }} -->
+
+    {{ if isset .Params "photo" }}
+      <script src="/js/maximize.js"></script>
+    {{ end }}
   </body>
 </html>

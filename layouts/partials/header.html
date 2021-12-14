@@ -1,6 +1,6 @@
 <header class="px-4 sm:px-8 lg:px-16 text-light-text sm:text-green inset-x-0 fixed bg-blue bottom-0 sm:bg-light-body sm:static h-16 sm:h-14 flex items-center">
   <nav class="hidden sm:container sm:mx-auto sm:flex justify-between items-center">
-    <a href="/" title="home" class="hidden sm:hover:underline sm:flex sm:items-center">
+    <a href="/" title="home" class="hidden sm:hover:underline sm:flex sm:items-center tab-able">
       <span class="font-bold text-3xl">{{ .Site.Title }}</span>
     </a>
     <div class="hidden items-center sm:flex sm:gap-10">
@@ -12,7 +12,7 @@
       {{ $active = or $active (and (eq .Name "Images") (eq $current.Section "images")) }}
       {{ $active = or $active (and (eq .Name "Blog") (eq $current.Section "blog")) }}
       {{ $active = or $active (and (eq .Name "Home") (eq $current.Title "") ) }}
-      <a href="{{ .URL }}" title="{{ .Title }}" class="sm:hover:underline {{ if $active }} font-bold {{end}}">{{ .Name }}</a>
+      <a href="{{ .URL }}" title="{{ .Title }}" class="sm:hover:underline tab-able {{ if $active }} font-bold {{end}}">{{ .Name }}</a>
       {{ end }}
     </div>
   </nav>
