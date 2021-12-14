@@ -1,7 +1,7 @@
 module.exports = {
   purge: {
     // enabled: true,
-    content:['./layouts/**/*.html']
+    content:['./layouts/**/*.html', './static/js/maximize.js']
   },
   darkMode: false, // or 'media' or 'class'
   theme: {

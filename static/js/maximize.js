@@ -28,7 +28,6 @@ function maximize(imagePath) {
 
   img.addEventListener('load', function loaded() {
     img.classList.add(...['opacity-100']);
-    console.log('image loaded!!');
     img.removeEventListener('load', loaded);
   });
 
