@@ -58,7 +58,7 @@
 
             <div class="hidden sm:block">
               {{ with .Params.image }}
-              {{ $imageName := printf "images/birds/%s-lg.jpg" .file }}
+              {{ $imageName := printf "images/birds/%s.jpg" .file }}
               {{ $image := resources.Get $imageName }}
               <a class="inline-flex gap-4 items-center cursor-pointer bg-blue hover:bg-blue-lighter transition duration-300 ease-in-out p-2 -ml-2 maximize" onclick=maximize({{ $image.RelPermalink }})>
                 <div>
