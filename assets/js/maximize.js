@@ -7,6 +7,7 @@ let tabAble = document.getElementsByClassName('tab-able');
 
 // TODO refactor a lot of this
 function maximize(imagePath) {
+  document.body.classList.add('fixed');
   for (let link of tabAble) {
     link.tabIndex = -1;
   }
@@ -70,4 +71,5 @@ function closeModal(img) {
   img.remove();
 
   imgLoader.classList.remove('hidden');
+  document.body.classList.remove('fixed');
 }
