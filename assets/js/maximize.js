@@ -2,6 +2,7 @@ let modal = document.getElementById('modal');
 let closeButton = document.getElementById('close');
 let max = document.getElementsByClassName('maximize');
 let imgLoader = document.getElementById('imgLoader');
+let imgLoaderText = document.getElementById('imgLoaderText');
 
 let tabAble = document.getElementsByClassName('tab-able');
 
@@ -45,6 +46,7 @@ function maximize(imagePath) {
     img.removeEventListener('load', loaded);
 
     imgLoader.classList.add(...['hidden']);
+    imgLoaderText.classList.add(...['hidden']);
   });
 
   img.setAttribute('src', imagePath);
@@ -59,17 +61,22 @@ function maximize(imagePath) {
 }
 
 function closeModal(img) {
-  modal.classList.replace('fixed', 'hidden');
-  closeButton.classList.replace('fixed', 'hidden');
+  modal.classList.replace('opacity-100', 'opacity-0');
+  setTimeout(() => {
+    modal.classList.replace('fixed', 'hidden');
+    imgLoaderText.classList.remove(['hidden']);
+    closeButton.classList.replace('fixed', 'hidden');
 
-  for (let link of tabAble) {
-    link.tabIndex = 0;
-  }
+    for (let link of tabAble) {
+      link.tabIndex = 0;
+    }
 
-  closeButton.tabIndex = -1;
+    closeButton.tabIndex = -1;
 
-  img.remove();
+    img.remove();
 
-  imgLoader.classList.remove('hidden');
-  document.body.classList.remove('fixed');
+    imgLoader.classList.remove('hidden');
+    document.body.classList.remove('fixed');
+  }, 250);
+
 }

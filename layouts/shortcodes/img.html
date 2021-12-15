@@ -1,0 +1,6 @@
+{{ $imageName := printf "images/blog/%s" (.Get "name") }}
+{{ $image := resources.Get $imageName }}
+{{ $image := $image.Resize "x600 webp photo q100" }}
+<figure>
+  <img src="{{ $image.RelPermalink }}" alt="{{ (.Get "alt") }}" class="sm:w-full">
+</figure>

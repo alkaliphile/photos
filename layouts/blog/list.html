@@ -5,7 +5,7 @@
       {{ range .Pages }}
       <div class="bg-blue-light text-light-text">
         <div>
-          {{ $imageName := printf "images/blog/%s" .Params.image }}
+          {{ $imageName := printf "images/blog/%s" .Params.listImage }}
           {{ $image := resources.Get $imageName }}
           {{ $image := $image.Resize "x410 webp photo" }}
           <a href="{{ .Permalink }}">

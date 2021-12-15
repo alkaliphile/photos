@@ -2,8 +2,8 @@
 title: "Bread World"
 date: 2021-12-04T14:31:41-05:00
 draft: false
-image: "best-loaf-5by4.jpg"
-cover:
+listImage: "best-loaf-5by4.jpg"
+singleCover:
   name: "best-loaf-2by1.jpg"
   alt:  "Best loaf I've ever made."
 tags:
