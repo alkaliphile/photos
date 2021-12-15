@@ -16,7 +16,8 @@
     {{- partial "script.html" . -}}
 
     {{ if isset .Params "photo" }}
-      <script src="/js/maximize.js"></script>
+      {{ $max := resources.Get "js/maximize.js" | minify}}
+      <script src="{{ $max.Permalink }}"></script>
     {{ end }}
   </body>
 </html>

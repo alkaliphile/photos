@@ -40,6 +40,9 @@ module.exports = {
       },
       outline: {
         green: '2px solid #4D7566'
+      },
+      animation: {
+        'bounce-slow': 'bounce 2s infinite'
       }
     }
   },

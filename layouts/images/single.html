@@ -56,7 +56,7 @@
             </div>
             {{ end }}
 
-            <div>
+            <div class="hidden sm:block">
               {{ with .Params.image }}
               {{ $imageName := printf "images/birds/%s.jpg" .file }}
               {{ $image := resources.Get $imageName }}
@@ -74,11 +74,11 @@
         </div>
         <div class="pt-8 sm:mb-0 mb-8 sm:flex sm:flex-wrap gap-4 sm:place-content-start md:justify-end sm:mr-2 xl:mr-6">
           {{ with .PrevInSection }}
-          <a href="{{ .Permalink }}" class="tab-able transition duration-300 ease-in-out text-light-text bg-green hover:text-green hover:border-green hover:border-opacity-80 border-2 border-green hover:bg-light-body p-4 sm:max-h-16 lg:max-h-full mr-4 md:mr-0 2xl:mr-2">Previous</a>
+          <a href="{{ .Permalink }}" class="tab-able transition duration-300 ease-in-out text-light-text bg-green hover:text-green hover:border-green hover:border-opacity-80 border-2 border-green hover:bg-light-body sm:text-sm sm:p-2 md:p-4 lg:text-base p-4 sm:max-h-16 lg:max-h-full mr-4 md:mr-0 2xl:mr-2">Previous</a>
           {{ end }}
 
           {{ with .NextInSection }}
-          <a href="{{ .Permalink }}" class="tab-able transition duration-300 ease-in-out text-light-text bg-green hover:text-green hover:border-green hover:border-opacity-80 border-2 border-green hover:bg-light-body p-4 sm:max-h-16 lg:max-h-full">Next</a>
+          <a href="{{ .Permalink }}" class="tab-able transition duration-300 ease-in-out text-light-text bg-green hover:text-green hover:border-green hover:border-opacity-80 border-2 border-green hover:bg-light-body sm:text-sm sm:p-2 md:p-4 lg:text-base p-4 sm:max-h-16 lg:max-h-full">Next</a>
           {{ end }}
         </div>
       </div>
@@ -88,6 +88,11 @@
 
 <div id="modal" class="hidden transition-all opacity-0 ease-in-out duration-500">
   <div id="close" class="hidden text-light-text">X</div>
+  <div id="imgLoader" class="text-light-text text-2xl flex w-full justify-center items-center min-h-screen">
+    <div class="animate-bounce-slow p-8">
+      Loading...
+    </div>
+  </div>
 </div>
 
 {{ end }}
