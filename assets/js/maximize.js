@@ -38,7 +38,8 @@ function maximize(imagePath) {
 
   // image
   let img = document.createElement('img');
-  const imgClasses = ['mx-auto', 'max-h-screen', 'p-12', 'transition-all', 'ease-in-out', 'opacity-0', 'duration-500'];
+  let imgWrapper = document.getElementById('imgWrapper');
+  const imgClasses = ['mx-auto', 'max-h-modal-img', 'transition-all', 'ease-in-out', 'opacity-0', 'duration-500'];
 
   img.classList.add(...imgClasses);
   img.addEventListener('load', function loaded() {
@@ -50,13 +51,22 @@ function maximize(imagePath) {
   });
 
   img.setAttribute('src', imagePath);
-  modal.appendChild(img);
+  imgWrapper.appendChild(img);
 
   document.addEventListener('keyup', function escape(event) {
     if (event.key === 'Escape') {
       closeModal(img);
       document.removeEventListener('keyup', escape);
     }
+  });
+
+  img.addEventListener('click', function stopProp(event) {
+    event.stopPropagation();
+  });
+
+  modal.addEventListener('click', function click(event) {
+    closeModal(img);
+    modal.removeEventListener('click', click);
   });
 }
 

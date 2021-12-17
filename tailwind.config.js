@@ -38,6 +38,9 @@ module.exports = {
       minHeight: {
         '50vh': '50vh'
       },
+      maxHeight: {
+        'modal-img': 'calc(100vh - 4rem)'
+      },
       outline: {
         green: '2px solid #4D7566'
       },
