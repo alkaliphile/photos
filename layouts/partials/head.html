@@ -5,6 +5,17 @@
 
   <title>{{ if not .IsHome }}{{ with .Title }}{{ . }} | {{ end }}{{ end }}{{ .Site.Title }}</title>
 
+  <noscript>
+    <style>
+      .loader {
+        display: none;
+      }
+      body {
+        position: inherit !important;
+      }
+    </style>
+  </noscript>
+
   {{ partial "favicon.html" . }}
 
   {{ $style := resources.Get "css/main.css" | postCSS }}

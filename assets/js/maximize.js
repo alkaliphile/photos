@@ -30,7 +30,7 @@ function maximize(imagePath) {
   });
 
   closeButton.addEventListener('keyup', function enter(event) {
-    if (event.key === 'Enter') {
+    if (event.key === 'Enter' || event.code === 'Space') {
       closeModal(img);
       closeButton.removeEventListener('keyup', enter);
     }

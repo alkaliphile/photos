@@ -55,6 +55,13 @@
               </div>
             </div>
 
+            <noscript>
+              <style>
+                .maximize {
+                  display: none;
+                }
+              </style>
+            </noscript>
             <div class="hidden sm:block">
               {{ $imageName := printf "images/birds/%s.jpg" .file }}
               {{ $image := resources.Get $imageName }}
