@@ -12,7 +12,7 @@ Hi! I'm Chris Keele, a software engineer living in Wilmington, Delaware.
 
 <br>
 
-I got serious about bird photography a few months into the pandemic. Before that,I had taken the occasional bird picture while out hiking, but I didn't care a whole lot about the aesthetics of the images.
+I got serious about bird photography a few months into the pandemic. Before that, I had taken the occasional bird picture while out hiking, but I didn't care a whole lot about the aesthetics of the images.
 
 <br>
 

@@ -4,18 +4,17 @@
   <div class="container mx-auto bg-blue-light text-light-text">
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
       <div>
-        {{ with .Params.image }}
-        {{ $imageNameSmall := printf "images/birds/%s-lg.jpg" .file }}
+        {{ $file := $.Param "image.file" }}
+        {{ $imageNameSmall := printf "images/birds/%s-lg.jpg" $file }}
         {{ $imageSmall := resources.Get $imageNameSmall }}
-        {{ $imageNameLarge := printf "images/birds/%s-lg.jpg" .file }}
+        {{ $imageNameLarge := printf "images/birds/%s-lg.jpg" $file }}
         {{ $imageLarge := resources.Get $imageNameLarge }}
 
         <picture>
           <source media="(max-width: 640px)" srcset="{{ $imageSmall.RelPermalink }}">
           <source media="(min-width: 641px)" srcset="{{ $imageLarge.RelPermalink }}">
-          <img src="{{ $imageLarge.RelPermalink }}" class="w-full">
+          <img src="{{ $imageLarge.RelPermalink }}" class="w-full" alt="{{ .Title }}">
         </picture>
-        {{ end }}
       </div>
       <div class="sm:grid sm:grid-cols-3 px-4 sm:px-2 sm:gap-6 lg:gap-4">
         <div class="flex flex-col justify-between sm:col-span-2">
@@ -29,7 +28,7 @@
             {{ with .Params.image }}
             <div class="flex items-center gap-4 mt-8">
               <div>
-                <img src="/svg/chevron-right-light.svg" height="16px" width="16px">
+                <img src="/svg/chevron-right-light.svg" height="16px" width="16px" alt="species">
               </div>
               <div>
                 {{ .species }}
@@ -37,7 +36,7 @@
             </div>
             <div class="flex items-center gap-4">
               <div>
-                <img src="/svg/camera-light.svg" height="16px" width="16px">
+                <img src="/svg/camera-light.svg" height="16px" width="16px" alt="gear">
               </div>
               <div>
                 {{ .camera }}<br>
@@ -46,7 +45,7 @@
             </div>
             <div class="flex items-center gap-4">
               <div>
-                <img src="/svg/cog-light.svg" height="16px" width="16px">
+                <img src="/svg/cog-light.svg" height="16px" width="16px" alt="settings">
               </div>
               <div>
                 {{ .aperture }}<br>
@@ -65,9 +64,9 @@
             <div class="hidden sm:block">
               {{ $imageName := printf "images/birds/%s.jpg" .file }}
               {{ $image := resources.Get $imageName }}
-              <a class="inline-flex gap-4 items-center cursor-pointer hover:bg-blue bg-blue-lighter transition duration-300 ease-in-out p-2 -ml-2 w-32 maximize" onclick=maximize({{ $image.RelPermalink }})>
+              <a class="inline-flex gap-4 items-center cursor-pointer bg-blue hover:bg-blue-lighter transition duration-300 ease-in-out p-2 -ml-2 w-32 maximize" onclick=maximize({{ $image.RelPermalink }})>
                 <div>
-                  <img src="/svg/frame-expand-light.svg" height="16px" width="16px">
+                  <img src="/svg/frame-expand-light.svg" height="16px" width="16px" alt="maximize">
                 </div>
                 <span>
                   Maximize
@@ -77,7 +76,7 @@
             <div>
               <a class="inline-flex gap-4 items-center cursor-pointer bg-blue hover:bg-blue-lighter transition duration-300 ease-in-out p-2 sm:-ml-2 w-32" href="{{ .link }}" target="_blank">
                 <div>
-                  <img src="/svg/dollar-light.svg" height="16px" width="16px">
+                  <img src="/svg/dollar-light.svg" height="16px" width="16px" alt="purchase">
                 </div>
                 <span>
                   Buy Prints
