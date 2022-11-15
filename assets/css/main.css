@@ -22,3 +22,7 @@
     background-image: url('../images/birds/015A2981-1500px.jpg');
   }
 }
+
+.max-h-modal-img {
+  max-height: calc(100vh - 4rem);
+}

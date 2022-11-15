@@ -1200,6 +1200,10 @@ video {
   }
 }
 
+.max-h-modal-img {
+  max-height: calc(100vh - 4rem);
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
