@@ -4,7 +4,8 @@
   "description": "Chris Keele photography website",
   "main": "index.js",
   "scripts": {
-    "tailwind": "npx tailwindcss -i ./assets/css/main.css -o ./assets/css/main.css"
+    "tailwind": "npx tailwindcss -i ./assets/css/main.css -o ./assets/css/main.css",
+    "prod": "hugo --minify --gc"
   },
   "repository": {
     "type": "git",
