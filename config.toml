@@ -49,12 +49,12 @@ summaryLength = 40
 
   [[menu.social]]
     name = "Instagram"
-    url = "https://www.instagram.com/chris_keele/"
+    url = "https://www.instagram.com/ckeelephotos/"
     pre = "instagram"
     weight = 1
   [[menu.social]]
     name = "Email"
-    url = "mailto:christopher.l.keele@gmail.com"
+    url = "mailto:chris@ckeele.com"
     pre = "envelope"
     weight = 2
   [[menu.social]]
