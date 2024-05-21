@@ -8,7 +8,7 @@ draft: false
 
 ---
 
-Hi! I'm Chris Keele, a software engineer living in Wilmington, Delaware.
+Hi! I'm Chris Keele, a software engineer living in Portsmouth, New Hampshire.
 
 <br>
 
@@ -16,7 +16,7 @@ I got serious about bird photography a few months into the pandemic. Before that
 
 <br>
 
-I'm currently brainstorming ways to use my pictures to make a positive impact in conservation.
+I'm currently brainstorming ways to use my pictures to make a positive impact in conservation -- particularly with regards to piping plovers, which are endangered here in New Hampshire.
 
 <br>
 
